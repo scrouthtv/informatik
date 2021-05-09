@@ -1,5 +1,7 @@
 package ue3;
 
+import ue2.MathematicalFunction;
+
 public class Main {
 	
 	public static void main(String[] args) {
@@ -27,6 +29,26 @@ public class Main {
 		
 		System.out.println("Required precision for sin(pi) <= e-3: "
 				  + howPreciseIsPrecise());
+		
+		MathematicalFunction exp = new MathematicalFunction() {
+			@Override
+			public double value(final double x) {
+				return Math.exp(x);
+			}
+			
+			@Override
+			public double deriv(final double x) {
+				return Math.exp(x);
+			}
+		};
+		
+		Integral i = new Integral(exp);
+		
+		System.out.println("Area under exp(x) between a = -1 and b = 1: " +
+				  i.integrate(-1, 1));
+		
+		final double realIntegral = Math.E - 1/Math.E;
+		System.out.println("Analytically: " + realIntegral);
 	}
 	
 	/**
