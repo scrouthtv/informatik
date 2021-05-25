@@ -35,6 +35,19 @@ public class Main {
 		s.setID(654321);
 		s.setName("Martin");
 		System.out.println(s);
+		
+		System.out.println(" --- ");
+		
+		Album a = new Album("Fear of a Blank Planet", 6);
+		a.addSong(new Song("Porcupine Tree", "Fear of a Blank Planet", 451));
+		a.addSong(new Song("Porcupine Tree", "My Ashes", 307));
+		a.addSong(new Song("Porcupine Tree, Alex Lifeson", "Anesthetize", 1062));
+		System.out.println(a);
+		a.printSongs();
+		
+		System.out.println(" --- ");
+		
+		
 	}
 	
 	public static void printPercentages(Map<Character, Double> map) {
