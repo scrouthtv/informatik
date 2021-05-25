@@ -47,7 +47,18 @@ public class Main {
 		
 		System.out.println(" --- ");
 		
+		VectorNd v1 = new VectorNd(3, 2.7, 19);
+		System.out.println(v1);
+		v1.normalize();
+		System.out.println(v1);
 		
+		VectorNd v2 = new VectorNd(8, -2);
+		v1.add(v2);
+		System.out.println(v1); // should be unchanged
+		
+		VectorNd v3 = new VectorNd(8, 3, -5.3);
+		v1.add(v3);
+		System.out.println(v1);
 	}
 	
 	public static void printPercentages(Map<Character, Double> map) {
