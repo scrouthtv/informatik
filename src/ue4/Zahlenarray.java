@@ -1,5 +1,7 @@
 package ue4;
 
+import java.util.ArrayList;
+
 public class Zahlenarray {
 	
 	public static int[] randomArray(final int length) {
@@ -95,4 +97,25 @@ public class Zahlenarray {
 		System.out.println(" ]");
 	}
 	
+	public static void print(final Integer[] a) {
+		System.out.print("[ ");
+		
+		for (int i = 0; i < a.length; i++) {
+			if (i > 0) System.out.print(", ");
+			System.out.print(a[i]);
+		}
+		
+		System.out.println(" ]");
+	}
+	
+	public static void print(final ArrayList<Integer> a) {
+		System.out.print("[ ");
+		
+		for (int i = 0; i < a.size(); i++) {
+			if (i > 0) System.out.print(", ");
+			System.out.print(a.get(i));
+		}
+		
+		System.out.println(" ]");
+	}
 }
