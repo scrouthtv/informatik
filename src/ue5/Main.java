@@ -28,6 +28,13 @@ public class Main {
 		
 		System.out.println("The german text is likely " + LangVowelTable.closest(germanTextOccurrences));
 		System.out.println("The english text is likely " + LangVowelTable.closest(englishTextOccurrences));
+		
+		System.out.println(" --- ");
+		
+		Student s = new Student(123456, "Thomas");
+		s.setID(654321);
+		s.setName("Martin");
+		System.out.println(s);
 	}
 	
 	public static void printPercentages(Map<Character, Double> map) {
