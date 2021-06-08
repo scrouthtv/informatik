@@ -1,0 +1,37 @@
+\documentclass[margin = 24mm]{standalone}
+
+\usepackage{tikz}
+\usepackage[simplified]{pgf-umlcd}
+
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+	\begin{class}[text width = 3cm]{Entity}{3, 0}
+	\end{class}
+
+	\begin{interface}[text width = 4cm]{IWalk}{-3, .2}
+	\end{interface}
+
+	\begin{class}[text width = 3cm]{Person}{0, -2}
+		\inherit{Entity}
+		\implement{IWalk}
+	\end{class}
+
+	\begin{class}[text width = 3cm]{Account}{8, -2}
+	\end{class}
+
+	\begin{class}[text width = 3cm]{Bank}{8, 0}
+	\end{class}
+
+	\draw[{Diamond[scale = 2]}-] (Bank) -- (Account)
+		node [pos = .85, left]{0..*} node [pos = .85, right]{~-accounts};
+
+	\draw[{Diamond[scale = 2, open]}-] (Person) -- (Account)
+		node [pos = .8, below]{0..*} node [pos = .8, above]{-accounts};
+
+\end{tikzpicture}
+
+\end{document}

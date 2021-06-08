@@ -3,3 +3,10 @@ out/
 # intellij files:
 .idea/
 *.iml
+
+# latex files:
+*.log
+*.aux
+*.fls
+*.synctex.*
+*.fdb_latexmk
