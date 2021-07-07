@@ -1,0 +1,11 @@
+100 % Anweisungsüberdeckung:
+1. [ 1, beliebig, true ]:
+   02, 04, 10, 11
+2. [ -1, 1, true ]:
+   02, 06, 10, 11
+3. [ 1, 1, false ]:
+   02, 08, 10, 11
+
+100 % Zweigüberdeckung:
+1., 2., 3. wie oben
+4. [ 1, -1, false ]: 01, 02, 03, 05, 07, 09, 10, 11
